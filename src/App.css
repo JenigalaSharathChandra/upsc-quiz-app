@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f9fafb; /* Tailwind's gray-50 */
+  color: #1f2937; /* Tailwind's gray-800 */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Optional: Smooth transitions for interactive components */
+button,
+input,
+div,
+span {
+  transition: all 0.2s ease-in-out;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Footer spacing */
+footer {
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Scroll behavior for longer quiz explanations */
+.scrollable-explanation {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
+/* Simple animation for loading spinner */
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
