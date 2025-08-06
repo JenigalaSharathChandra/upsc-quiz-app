@@ -170,7 +170,7 @@ export default function App() {
     };
 
     try {
-        const apiKey = "REMOVED_GOOGLE_API_KEY";
+        const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
         for (let i = 0; i < numBatches; i++) {
@@ -255,7 +255,7 @@ Output should be in strict JSON: { quiz: [{question, options, answer, explanatio
         }
 
         try {
-            const apiKey = "REMOVED_GOOGLE_API_KEY";
+            const apiKey = process.env.REACT_APP_GEMINI_API_KEY;
             const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
             const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }] };
 
